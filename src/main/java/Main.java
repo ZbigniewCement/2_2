@@ -1,14 +1,31 @@
-// import static org.junit.jupiter.api.Assertions.assertEquals;
-
-// import org.junit.jupiter.api.Test;
+import java.util.Scanner;
 
 public class Main {
-  public static void main(String[] args) {
-    System.out.println("Hello world!");
-  }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-  // @Test
-  // void addition() {
-  //     assertEquals(2, 1 + 1);
-  // }
+        // Pobieranie trzech liczb od użytkownika
+        System.out.print("Podaj pierwsza liczbę: ");
+        int a = scanner.nextInt();
+
+        System.out.print("Podaj drugą liczbę: ");
+        int b = scanner.nextInt();
+
+        System.out.print("Podaj trzecią liczbę: ");
+        int c = scanner.nextInt();
+
+        // Wyznaczenie największej liczby
+        int najwieksza = a;
+
+        if (b > najwieksza) {
+            najwieksza = b;
+        }
+
+        if (c > najwieksza) {
+            najwieksza = c;
+        }
+
+        // Wypisanie największej liczby
+        System.out.println("Największa liczba to: " + najwieksza);
+    }
 }
